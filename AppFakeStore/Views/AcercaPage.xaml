@@ -3,26 +3,99 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppFakeStore.Views.AcercaPage"
              xmlns:models="clr-namespace:AppFakeStore.Models"
-             Title="AcercaPage">
-    <VerticalStackLayout>
-        <Image Source="dotnet_bot.png" />
-        <Label 
-            Text="Datos del Programador"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Datos del Programador">
+
+    <ScrollView Margin="3">
+        <VerticalStackLayout >
+
+            <Image Margin="30" Source="fotoprogramador.jpg" />
+            <Label 
+                FontSize="20"
+                Text="Datos del Programador"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="0,-15,0,20"/>
+
+            <Grid ColumnDefinitions=".3*,.4*,.3*" RowDefinitions="*,*" ColumnSpacing="0">
+
+                <Label 
+                    Text="Descripción" 
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    VerticalOptions="Center"/>
+
+                <Label 
+                    Text="Precio" 
+                    Grid.Column="3" 
+                    Grid.Row="1" 
+                    VerticalOptions="Center"/>     
+            </Grid>
+
+            <Grid 
+                RowSpacing="10"
+                ColumnSpacing="10"
+                ColumnDefinitions="*,*" 
+                RowDefinitions="*,*,*,*,*,*,*,*">
+
+                <Button ContentLayout="Top, 5" Grid.Row="1" Text="Whatsapp" HeightRequest="85" Command="{Binding GoToProductoListaCommand}" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe1bd;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="1" Text="Correo" HeightRequest="85" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xf05b;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="2" Text="Instagram" HeightRequest="85" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe7fd;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="2" Text="Facebook" HeightRequest="85" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xf233;"/>
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="3" Text="Pag. Web" HeightRequest="85" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xf86b;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="3" Text="LinKedln" HeightRequest="85" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe0b7;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="4" Text="GitHub" HeightRequest="85" Command="{Binding GoToAcercaCommand}" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe88e;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="4" Text="Telegram" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="5" Text="Mis Compras" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="5" Text="Enviar Mensaje" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                    <Button.ImageSource>
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
+                    </Button.ImageSource>
+                </Button>
+
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
 
 
-        <Button x:Name="IconBtn" Margin="0, 10" ContentLayout="Top, 5" Text="Contacto" Clicked="IconBtn_Clicked" WidthRequest="120" HeightRequest="70">
-            <Button.ImageSource >
-                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xe158;" />
-            </Button.ImageSource>
-        </Button>
-        <Button  x:Name="BackBtn" ContentLayout="Top, 5" Text="Volver" Clicked="BackBtn_Clicked" WidthRequest="120" HeightRequest="70">
-            <Button.ImageSource >
-                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xeba6;"/>
-            </Button.ImageSource>
-        </Button>
-
-        
-    </VerticalStackLayout>
 </ContentPage>
