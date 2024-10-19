@@ -1,12 +1,21 @@
-﻿namespace AppFakeStore.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace AppFakeStore.Models;
 
 public class Producto
 {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string description { get; set; }
-    public decimal price { get; set; }
-    public string category { get; set; }
-    public string image { get; set; }
-    public Rating rating { get; set; }
+    public int Id { get; set; }
+    public string? NumeroProducto { get; set; }
+    public string? NombreProducto { get; set; }
+    public string? Medidas { get; set; }
+    public int? Cantidad { get; set; }
+    public int? Peso { get; set; }
+    public decimal? Precio { get; set; }
+    public string? TipoDeMoneda { get; set; }
+    public string? Descripcion { get; set; }
+    public int? Stock { get; set; }
+    public string? Imagen { get; set; }
+    public string? RutaImagen { get; set; }
+    public string? RutaImagenLocal { get; set; }
+    public DateTime Fecha { get; set; }
 }

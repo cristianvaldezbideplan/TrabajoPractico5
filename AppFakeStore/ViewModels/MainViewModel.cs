@@ -7,7 +7,7 @@ public partial class MainViewModel : BaseViewModel
 {
     public MainViewModel()
     {
-        Title = "ITES - Demo MVVM";
+        Title = "StoreNEGO";
     }
 
     [RelayCommand]

@@ -14,21 +14,58 @@
                 Text="Datos del Programador"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" 
-                Margin="0,-15,0,20"/>
+                Margin="0,-15,0,15"/>
 
-            <Grid ColumnDefinitions=".3*,.4*,.3*" RowDefinitions="*,*" ColumnSpacing="0">
+            <Grid ColumnDefinitions=".3*,.6*,.3*" RowDefinitions="*,*,*,*,*,*" ColumnSpacing="0">
 
                 <Label 
-                    Text="Descripción" 
+                    Text="Nombre:      Jose" 
+                    Grid.Column="1" 
+                    Grid.Row="0" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Apellido:      Peralta" 
                     Grid.Column="1" 
                     Grid.Row="1" 
-                    VerticalOptions="Center"/>
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
 
                 <Label 
-                    Text="Precio" 
-                    Grid.Column="3" 
-                    Grid.Row="1" 
-                    VerticalOptions="Center"/>     
+                    Text="Localidad:      Peralta" 
+                    Grid.Column="1" 
+                    Grid.Row="2" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Provincia:      Peralta" 
+                    Grid.Column="1" 
+                    Grid.Row="3" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Contacto:      Peralta" 
+                    Grid.Column="1" 
+                    Grid.Row="4" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Titulo:      Peralta" 
+                    Grid.Column="1" 
+                    Grid.Row="5" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"/> 
+                
             </Grid>
 
             <Grid 
@@ -37,9 +74,9 @@
                 ColumnDefinitions="*,*" 
                 RowDefinitions="*,*,*,*,*,*,*,*">
 
-                <Button ContentLayout="Top, 5" Grid.Row="1" Text="Whatsapp" HeightRequest="85" Command="{Binding GoToProductoListaCommand}" BackgroundColor="#002663">
+                <Button ContentLayout="Top, 5" Grid.Row="1" Text="Whatsapp" HeightRequest="85" BackgroundColor="#002663">
                     <Button.ImageSource>
-                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe1bd;" />
+                        <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe80e;" />
                     </Button.ImageSource>
                 </Button>
                 <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="1" Text="Correo" HeightRequest="85" BackgroundColor="#002663">
@@ -68,25 +105,25 @@
                     </Button.ImageSource>
                 </Button>
 
-                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="4" Text="GitHub" HeightRequest="85" Command="{Binding GoToAcercaCommand}" BackgroundColor="#002663">
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="4" Text="GitHub" HeightRequest="85" BackgroundColor="#002663">
                     <Button.ImageSource>
                         <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe88e;" />
                     </Button.ImageSource>
                 </Button>
 
-                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="4" Text="Telegram" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="4" Text="Telegram" HeightRequest="85"  BackgroundColor="#002663">
                     <Button.ImageSource>
                         <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
                     </Button.ImageSource>
                 </Button>
 
-                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="5" Text="Mis Compras" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="5" Text="Mis Compras" HeightRequest="85" BackgroundColor="#002663">
                     <Button.ImageSource>
                         <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
                     </Button.ImageSource>
                 </Button>
 
-                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="5" Text="Enviar Mensaje" HeightRequest="85" Command="{Binding ExitCommand}" BackgroundColor="#002663">
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="5" Text="Enviar Mensaje" HeightRequest="85" BackgroundColor="#002663">
                     <Button.ImageSource>
                         <FontImageSource Size="22" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
                     </Button.ImageSource>

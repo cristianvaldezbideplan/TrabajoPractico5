@@ -34,14 +34,14 @@
                             BackgroundColor="#fefefe">
                            
                             <Image Grid.Column="0"
-                               Source="{Binding image}"
+                               Source="{Binding Imagen}"
                                WidthRequest="80"
                                HeightRequest="80"
                                Aspect="AspectFit"
                                />
 
                             <Label Grid.Column="1" 
-                               Text="{Binding title}"
+                               Text="{Binding NombreProducto}"
                                VerticalOptions="Center"
                                TextColor="Black"/>
                             

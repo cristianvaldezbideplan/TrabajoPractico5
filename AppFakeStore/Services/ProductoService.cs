@@ -8,7 +8,7 @@ namespace AppFakeStore.Services;
 
 public class ProductoService : IProductoService
 {
-    HttpClient client;
+    HttpClient Producto;
 
     private static JsonSerializerOptions options = new()
     {
@@ -17,16 +17,16 @@ public class ProductoService : IProductoService
 
     public ProductoService()
     {
-        client = new HttpClient();
+        Producto = new HttpClient();
 
-        client.BaseAddress = new Uri(Constants.ApiDataServer);
-        client.DefaultRequestHeaders.Accept.Add(
+        Producto.BaseAddress = new Uri(Constants.ApiDataServer);
+        Producto.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/json"));
     }
     
     public async Task<IEnumerable<Producto>> GetProductsAsync()
     {
-        var response = await client.GetAsync(Constants.ProductsEndpoint);
+        var response = await Producto.GetAsync(Constants.ProductsEndpoint);
 
         if (response.IsSuccessStatusCode)
             return await response.Content.ReadFromJsonAsync<IEnumerable<Producto>>(options);
