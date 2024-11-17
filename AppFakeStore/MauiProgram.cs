@@ -1,12 +1,14 @@
-﻿using AppFakeStore.Services;
-using AppFakeStore.ViewModels;
-using AppFakeStore.Views;
+﻿using AppFakeStore.mvvm.ViewModels;
+using AppFakeStore.mvvm.Views;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace AppFakeStore
 {
     public static class MauiProgram
     {
+        private const string BaseAddress = "https://localhost:7028/";
+
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
@@ -19,14 +21,6 @@ namespace AppFakeStore
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialDesignIcons");
                 });
-
-            builder.Services.AddSingleton<IProductoService, ProductoService>();
-            builder.Services.AddSingleton<ICarritoCompraService, CarritoCompraService>();
-            builder.Services.AddSingleton<IUsuariosService, UsuariosService>();
-            builder.Services.AddSingleton<IRegistroService, RegistroService>();
-
-            builder.Services.AddTransient<ProductoListaViewModel>();
-            builder.Services.AddTransient<ProductoListaPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();

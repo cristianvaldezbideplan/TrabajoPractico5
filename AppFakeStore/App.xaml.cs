@@ -1,6 +1,4 @@
-﻿using AppFakeStore.Services;
-using AppFakeStore.ViewModels;
-using AppFakeStore.Views;
+﻿using AppFakeStore.mvvm.Views;
 
 namespace AppFakeStore
 {
@@ -10,7 +8,7 @@ namespace AppFakeStore
         {
             InitializeComponent();
             //MainPage = new AppShell();
-            MainPage = new NavigationPage(new Login());
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }

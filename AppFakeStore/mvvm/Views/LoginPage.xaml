@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.LoginPage"
+             xmlns:ViewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             xmlns:Views="clr-namespace:AppFakeStore.mvvm.Views"
+             x:DataType="ViewModels:LoginViewModel"
+             Title="{Binding Title}"
+             Background="Black">
+
+    <VerticalStackLayout>
+        
+        <Image Margin="60,80,60,60" Source="iconologin.png" />
+
+        <Grid 
+            RowSpacing="10"
+            ColumnSpacing="10"
+            ColumnDefinitions="*,*" 
+            RowDefinitions="*,*,*,*,*">
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Email: " Grid.Column="0" Grid.Row="0" TextColor="#FD5C63"/>
+
+            <Entry
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="0"
+                Text="{Binding Email}"
+                Placeholder="Email"
+                PlaceholderColor="#FD5C63"
+                TextColor="#FD5C63"
+                FontSize="23"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Contraseña: " Grid.Column="0" Grid.Row="2" TextColor="#FD5C63"/>
+
+            <Entry 
+                Placeholder="Contraseña"
+                Text="{Binding Password}" 
+                PlaceholderColor="#FD5C63"
+                IsPassword="True"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                TextColor="#FD5C63"
+                FontSize="23"/>
+
+            <Button 
+                Margin="40,0,20,70" 
+                Command="{Binding LoginCommand}"
+                Grid.Row="4" 
+                Grid.Column="0" 
+                Text="Iniciar Sesion"
+                FontSize="23"
+                TextColor="Black"                
+                BackgroundColor="#FD5C63">                
+            </Button>
+
+            <Button
+                Margin="0,0,60,70"
+                Command="{Binding PanantallaRegistrarCommand}"
+                Grid.Row="4" 
+                Grid.Column="1" 
+                Text="Registrar"
+                FontSize="21"
+                TextColor="Black"
+                BackgroundColor="#FD5C63">
+            </Button>
+            <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Message}" FontSize="Small" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center" />
+            <ActivityIndicator Grid.Row="5" Grid.ColumnSpan="2" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

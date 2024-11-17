@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             x:Class="AppFakeStore.mvvm.Views.MainPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:MainViewModel"
+             Title="{Binding Title}"             
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout >
+            <Grid 
+                RowSpacing="20"
+                ColumnSpacing="0"
+                ColumnDefinitions="*,*" 
+                RowDefinitions="*,*,*,*,*,*,*,*">
+
+                <Label HorizontalTextAlignment="Center" FontSize="30" Text="MENU DE OPCIONES" Grid.ColumnSpan="2" Grid.Row="0" TextColor="#FD5C63"/>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Row="1" Text="Productos" WidthRequest="190" HeightRequest="250" Command="{Binding GoToProductoListaCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe1bd;"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="1" Grid.Row="1" Text="Categorías" WidthRequest="190" HeightRequest="250" Command="{Binding CategoríasCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xf05b;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="0" Grid.Row="2" Text="Ayuda" WidthRequest="190" HeightRequest="250" Command="{Binding AyudaCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe7fd;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="1" Grid.Row="2" Text="Perfil" WidthRequest="190" HeightRequest="250" Command="{Binding PerfilCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xf233;"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="0" Grid.Row="4" Text="Developer" WidthRequest="190" HeightRequest="250" Command="{Binding GoToAcercaCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe88e;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="1" Grid.Row="4" Text="Carrito" WidthRequest="190" HeightRequest="250" Command="{Binding CarritoDeComprasCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe854;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="26" ContentLayout="Top, 50" Grid.Column="1" Grid.Row="5" Text="Mis Compras" WidthRequest="190" HeightRequest="250" Command="{Binding MisComprasCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xeb88;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="26" ContentLayout="Top, 50" Grid.Column="0" Grid.Row="5" Text="Mis Favoritos" WidthRequest="190" HeightRequest="250" Command="{Binding MisFavoritosCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe838;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button TextColor="Black" FontSize="30" ContentLayout="Top, 50" Grid.Column="0" Grid.Row="6" Text="Salir" WidthRequest="190" HeightRequest="250" Command="{Binding ExitCommand}" BackgroundColor="#FD5C63">
+                    <Button.ImageSource>
+                        <FontImageSource Size="100" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
+                    </Button.ImageSource>
+                </Button>
+
+            </Grid>            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

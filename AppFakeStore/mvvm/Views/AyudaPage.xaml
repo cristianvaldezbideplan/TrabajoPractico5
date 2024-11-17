@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.AyudaPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:AyudaViewModel"
+             Title="AyudaPage"
+             BackgroundColor="Black">
+
+    <ScrollView>
+    <VerticalStackLayout>
+        <Label 
+            Text="Ayuda App"
+            TextColor="#FD5C63"
+            Margin="0,15,0,0"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label 
+    Text="Productos"
+    TextColor="#FD5C63"
+    Margin="0,30,0,0"
+    FontSize="25"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" />
+
+            <Label 
+    Text="Apartado para visualizar los productos que el cliente desee Comprar o en caso de ser Vendedor, desee Crear, Modificar o Eliminar."
+    TextColor="White"
+    Margin="40,15,40,0"
+    FontSize="20"/>
+
+            <Label 
+    Text="Categorias"
+    TextColor="#FD5C63"
+    Margin="0,30,0,0"
+    FontSize="25"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" />
+
+            <Label 
+    Text="Apartado para visualizar los productos que el cliente desee Comprar por medio de Filtros, uno de esos filtros son las Categorias."
+    TextColor="White"
+    Margin="40,15,40,0"
+    FontSize="20"
+    VerticalOptions="Center" 
+    HorizontalOptions="Center" />
+
+            <Label 
+Text="Perfil"
+TextColor="#FD5C63"
+Margin="0,30,0,0"
+FontSize="25"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Apartado para visualizar la Informacion del Perfil del Cliente o del Vendedor."
+TextColor="White"
+Margin="40,15,40,0"
+FontSize="20"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Developer"
+TextColor="#FD5C63"
+Margin="0,30,0,0"
+FontSize="25"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Apartado para visualizar la Informacion del Encargado o Desarrollador de la App."
+TextColor="White"
+Margin="40,15,40,0"
+FontSize="20"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Carrito"
+TextColor="#FD5C63"
+Margin="0,30,0,0"
+FontSize="25"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Apartado que consiste en cargar un carrito de compras con varios productos que uno desee comprar, y asi, armar y enviar un solo paquete con todos los Productos que selecciono el cliente."
+TextColor="White"
+Margin="40,15,40,0"
+FontSize="20"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Mis Favoritos"
+TextColor="#FD5C63"
+Margin="0,30,0,0"
+FontSize="25"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Esta seccion se encarga de guardar los Productos que desee comprar el cliente o que desee guardar en su perfil."
+TextColor="White"
+Margin="40,15,40,0"
+FontSize="20"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Mis Compras"
+TextColor="#FD5C63"
+Margin="0,30,0,0"
+FontSize="25"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+            <Label 
+Text="Esta seccion se encarga de guardar las compras que realizo el cliente."
+TextColor="White"
+Margin="40,15,40,0"
+FontSize="20"
+VerticalOptions="Center" 
+HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

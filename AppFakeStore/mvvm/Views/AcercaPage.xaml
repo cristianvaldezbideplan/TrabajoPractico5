@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.AcercaPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:AcercaViewModel"
+             Title="Datos del Programador"
+             BackgroundColor="Black">
+
+    <ScrollView Margin="3">
+
+        <VerticalStackLayout >
+
+            <Label 
+                 Text="Acerca del Desarrollador"
+                 TextColor="#FD5C63"
+                 Margin="0,15,0,0"
+                 FontSize="30"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center" />
+            
+            <Image Margin="30" Source="fotoprogramador.jpg" />
+            <Label 
+                TextColor="#FD5C63"
+                FontSize="20"
+                Text="Datos del Programador"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="0,-15,0,10"/>
+
+            <Grid ColumnDefinitions=".3*,.6*,.3*" RowDefinitions="*,*,*,*,*,*" ColumnSpacing="0" Margin="0,15,0,10">
+
+                <Label 
+                    Text="Nombre:         Jose" 
+                    Grid.Column="1" 
+                    Grid.Row="0" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    TextColor="#FD5C63"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Apellido:         Peralta" 
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    VerticalOptions="Center"
+                    TextColor="#FD5C63"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Localidad:      Santa Rosa" 
+                    Grid.Column="1" 
+                    Grid.Row="2" 
+                    VerticalOptions="Center"
+                    TextColor="#FD5C63"
+                    FontSize="18"
+                    Padding="15,0,0,5"/>
+
+                <Label 
+                    Text="Provincia:      La Pampa" 
+                    Grid.Column="1" 
+                    Grid.Row="3" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"
+                    TextColor="#FD5C63"/>
+
+                <Label 
+                    Text="Contacto:      2954330926" 
+                    Grid.Column="1" 
+                    Grid.Row="4" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"
+                    TextColor="#FD5C63"/>
+
+                <Label 
+                    Text="   Titulo:            JP@gmail.com" 
+                    Grid.Column="1" 
+                    Grid.Row="5" 
+                    VerticalOptions="Center"
+                    FontSize="18"
+                    Padding="15,0,0,5"
+                    TextColor="#FD5C63"/> 
+                
+            </Grid>
+
+            <Grid 
+                RowSpacing="10"
+                ColumnSpacing="10"
+                ColumnDefinitions="*,*" 
+                RowDefinitions="*,*,*,*,*,*,*,*">
+
+                <Button ContentLayout="Top, 5" Grid.Row="1" Text="Whatsapp" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xe80e;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="1" Text="Correo" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xf05b;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="2" Text="Instagram" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xe7fd;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="2" Text="Facebook" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xf233;"/>
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="3" Text="Pag. Web" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xf86b;" />
+                    </Button.ImageSource>
+                </Button>
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="3" Text="LinKedln" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xe0b7;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="0" Grid.Row="4" Text="GitHub" HeightRequest="85" BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xe88e;" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button ContentLayout="Top, 5" Grid.Column="1" Grid.Row="4" Text="Telegram" HeightRequest="85"  BackgroundColor="#FD5C63" TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource Size="30" FontFamily="MaterialDesignIcons" Glyph="&#xe9ba;" />
+                    </Button.ImageSource>
+                </Button>
+
+            </Grid>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

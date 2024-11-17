@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.CrearProductoPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:ProductoAgregarViewModel"
+             xmlns:models="clr-namespace:AppFakeStore.mvvm.Models"
+             Title="{Binding Title}"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        
+    <VerticalStackLayout>
+
+        <Image Margin="100,15,120,5" Source="articulonuevo.png" />
+
+            <Grid
+            RowSpacing="10"
+            ColumnSpacing="10"
+            ColumnDefinitions="*,*" 
+            RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*">
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Producto: " Grid.Column="0" Grid.Row="0" TextColor="#FD5C63" Margin="68,10,0,0"/>
+
+                <Entry
+            MaxLength="500" 
+            Grid.Column="1" 
+            Grid.Row="0"
+            Placeholder="{Binding Nombre}"
+            PlaceholderColor="#FD5C63"
+            TextColor="#FD5C63"
+            FontSize="20"
+            Margin="0,5,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="SKU: " Grid.Column="0" Grid.Row="1" TextColor="#FD5C63" Margin="20,-7,0,0"/>
+
+                <Entry 
+            Placeholder="SKU"
+            Text="{Binding Numeroproducto}"
+            PlaceholderColor="#FD5C63"
+            MaxLength="500" 
+            Grid.Column="1" 
+            Grid.Row="1"
+            TextColor="#FD5C63"
+            FontSize="20"
+            Margin="0,-13,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Medida: " Grid.Column="0" Grid.Row="2" TextColor="#FD5C63" Margin="50,0,0,0"/>
+
+                <Entry 
+            Placeholder="Medida"
+            Text="{Binding Medidas}"
+            PlaceholderColor="#FD5C63"
+            MaxLength="500" 
+            Grid.Column="1" 
+            Grid.Row="2"
+            TextColor="#FD5C63"
+            FontSize="20"
+            Margin="0,-6,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Cantidad: " Grid.Column="0" Grid.Row="3" TextColor="#FD5C63" Margin="65,0,0,0"/>
+
+                <Entry 
+            Placeholder="Cantidad"
+            Text="{Binding Cantidad}"
+            PlaceholderColor="#FD5C63"
+            MaxLength="500" 
+            Grid.Column="1" 
+            Grid.Row="3"
+            TextColor="#FD5C63"
+            FontSize="20"
+            Margin="0,-6,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Peso: " Grid.Column="0" Grid.Row="4" TextColor="#FD5C63" Margin="30,0,0,0"/>
+
+                <Entry 
+            Placeholder="Peso"
+            Text="{Binding Peso}"
+            PlaceholderColor="#FD5C63"
+            MaxLength="500" 
+            Grid.Column="1" 
+            Grid.Row="4"
+            TextColor="#FD5C63"
+            FontSize="20"
+            Margin="0,-5,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Precio: " Grid.Column="0" Grid.Row="5" TextColor="#FD5C63" Margin="40,0,0,0"/>
+
+                <Entry 
+        Placeholder="Precio"
+        Text="{Binding Precio}"
+        PlaceholderColor="#FD5C63"
+        MaxLength="500" 
+        Grid.Column="1" 
+        Grid.Row="5"
+        TextColor="#FD5C63"
+        FontSize="20"
+        Margin="0,-6,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Descripcion: " Grid.Column="0" Grid.Row="6" TextColor="#FD5C63" Margin="95,0,0,0"/>
+
+                <Entry 
+Placeholder="Descripcion"
+Text="{Binding Descripcion}"                   
+PlaceholderColor="#FD5C63"
+MaxLength="500" 
+Grid.Column="1" 
+Grid.Row="6"
+TextColor="#FD5C63"
+FontSize="20"
+Margin="0,-6,0,0"/>
+
+                <Label HorizontalTextAlignment="Center" FontSize="20" Text="Stock: " Grid.Column="0" Grid.Row="7" TextColor="#FD5C63" Margin="95,0,0,0"/>
+
+                <Entry 
+Placeholder="Stock"
+Text="{Binding Stock}"                   
+PlaceholderColor="#FD5C63"
+MaxLength="500" 
+Grid.Column="1" 
+Grid.Row="7"
+TextColor="#FD5C63"
+FontSize="20"
+Margin="0,-6,0,0"/>
+
+                <Label FontSize="20" TextColor="#FD5C63" Text="Categoria" Grid.Column="0" Grid.Row="8" Margin="125,0,0,0"/>
+                <Picker
+        Grid.Column="1" Grid.Row="8"
+        TextColor="Black"
+        FontSize="20"
+        BackgroundColor="#FD5C63"
+        x:Name="CategoriaPicker"
+        ItemDisplayBinding="{Binding Value}"
+        SelectedItem="{Binding CategoriaSeleccionada}"
+        ItemsSource="{Binding ListaCategorias}"/>
+            </Grid>
+
+            <Button 
+Text="Galeria" 
+Command="{Binding FotoGaleriaCommand}" 
+BackgroundColor="Maroon" 
+Margin="100,0,100,20"/>
+
+            <Button 
+Text="Tomar Foto" 
+Command="{Binding TomarFotoCommand}" 
+BackgroundColor="DarkOliveGreen"
+Margin="100,0,100,20"/>
+
+            <Image 
+Aspect="AspectFit"
+Source="{Binding RutaImagen}"                     
+WidthRequest="300"
+HeightRequest="300" 
+HorizontalOptions="Center"
+BackgroundColor="#FD5C63"/>
+
+            <Button
+    Margin="180,25,180,0"
+    Command="{Binding GrabarProductoCommand}"
+    Grid.Row="12" 
+    Grid.Column="1" 
+    Text="Grabar"
+    FontSize="21"
+    TextColor="Black"
+    BackgroundColor="#FD5C63">
+            </Button>
+
+            <Button
+Margin="180,25,180,0"
+Command="{Binding CancelarCommand}"
+Grid.Row="13" 
+Grid.Column="1" 
+Text="Cancelar"
+FontSize="21"
+TextColor="Black"
+BackgroundColor="#FD5C63">
+            </Button>
+
+        </VerticalStackLayout>
+    
+    </ScrollView>
+    
+</ContentPage>

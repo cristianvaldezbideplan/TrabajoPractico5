@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.RegistroPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:RegistroViewModel"
+             Title="{Binding Title}"
+             Background="Black">
+    
+    <VerticalStackLayout>
+
+        <Image Margin="100,30,120,20" Source="iconologin.png" />
+
+        <Grid 
+            
+            RowSpacing="10"
+            ColumnSpacing="10"
+            ColumnDefinitions="*,*" 
+            RowDefinitions="*,*,*,*,*,*,*">
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Nombre: " Grid.Column="0" Grid.Row="0" TextColor="#FD5C63" Margin="68,10,0,0"/>
+
+            <Entry
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="0"
+                Placeholder="Nombre"
+                PlaceholderColor="#FD5C63"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,4,0,0"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Apellido: " Grid.Column="0" Grid.Row="2" TextColor="#FD5C63" Margin="68,0,0,0"/>
+
+            <Entry 
+                Placeholder="Apellido"
+                PlaceholderColor="#FD5C63"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="2"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,-6,0,0"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="C.D: " Grid.Column="0" Grid.Row="3" TextColor="#FD5C63" Margin="25,0,0,0"/>
+
+            <Entry 
+                Placeholder="C.D"
+                PlaceholderColor="#FD5C63"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="3"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,-6,0,0"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Email: " Grid.Column="0" Grid.Row="4" TextColor="#FD5C63" Margin="45,0,0,0"/>
+
+            <Entry 
+                Placeholder="Email"
+                PlaceholderColor="#FD5C63"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="4"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,-6,0,0"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Contraseña: " Grid.Column="0" Grid.Row="5" TextColor="#FD5C63" Margin="100,0,0,0"/>
+
+            <Entry 
+                Placeholder="Contraseña"
+                PlaceholderColor="#FD5C63"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="5"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,-5,0,0"/>
+
+            <Label HorizontalTextAlignment="Center" FontSize="20" Text="Rep-Contras.: " Grid.Column="0" Grid.Row="6" TextColor="#FD5C63" Margin="115,0,0,0"/>
+
+            <Entry 
+                Placeholder="Rep-Contras."
+                PlaceholderColor="#FD5C63"
+                MaxLength="500" 
+                Grid.Column="1" 
+                Grid.Row="6"
+                TextColor="#FD5C63"
+                FontSize="20"
+                Margin="0,-6,0,0"/> 
+
+        </Grid>
+
+        <Button
+            Margin="110,25,110,0"
+            Command="{Binding PantallaIniciarSesisonCommand}"
+            Grid.Row="4" 
+            Grid.Column="1" 
+            Text="Registrarse"
+            FontSize="21"
+            TextColor="Black"
+            BackgroundColor="#FD5C63">
+        </Button>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

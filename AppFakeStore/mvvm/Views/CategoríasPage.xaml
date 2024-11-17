@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.CategoríasPage"
+             xmlns:viewModels="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="viewModels:CategoriasViewModel"
+             Title="CategoríasPage"
+             BackgroundColor="Black">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Categorias"
+            TextColor="#FD5C63"
+            Margin="0,15,0,0"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button    
+            Text="Filtros de Categoria "
+            FontSize="21"
+            TextColor="Black"
+            BackgroundColor="#FD5C63"
+            Margin="60,15,60,10">
+            
+            <Button.ImageSource>
+                <FontImageSource Size="40" FontFamily="MaterialDesignIcons" Glyph="&#xe1bd;"/>
+            </Button.ImageSource>
+            
+        </Button>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

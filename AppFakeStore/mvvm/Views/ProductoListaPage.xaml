@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFakeStore.mvvm.Views.ProductoListaPage"
+             xmlns:ViewModel="clr-namespace:AppFakeStore.mvvm.ViewModels"
+             x:DataType="ViewModel:ProductoListaViewModel"
+             Title="{Binding Title}"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        
+    <VerticalStackLayout>
+
+            <Button
+    Command="{Binding CerrarSesionCommand}"   
+    Text="Cerrar Sesion"
+    FontSize="21"
+    TextColor="Black"
+    BackgroundColor="#FD5C63"
+    Margin="60,10,60,10">
+            </Button>
+        
+            <Button
+            Command="{Binding NuevoProductoCommand}"   
+            Text="Crear Nuevo Producto"
+            FontSize="21"
+            TextColor="Black"
+            BackgroundColor="#FD5C63"
+            Margin="60,10,60,10">
+        </Button>
+    
+    <Grid ColumnDefinitions="*,*" ColumnSpacing="5" RowDefinitions="*,Auto" RowSpacing="5" Margin="50,0,50,0">
+
+            <RefreshView Grid.ColumnSpan="2" Command="{Binding GetProductosCommand}" IsRefreshing="{Binding IsRefreshing}">
+
+            <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Productos}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding ProductoSeleccionado}"
+                        SelectionChangedCommand="{Binding GoToDetalleCommand}"
+                        EmptyView="--SIN DATOS DISPONIBLES--">
+                        <!---<CollectionView.EmptyView>
+                    <StackLayout>
+                        <Image Source="not_found.jpg" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </CollectionView.EmptyView> -->
+                
+                <CollectionView.ItemTemplate>
+                    <!--- DataTemplate x:DataType="model:Productos" -->
+                            <DataTemplate>
+                                <Grid BackgroundColor="Black">
+                          <Grid 
+                                ColumnDefinitions=".3*,.3*,.4*"
+                                RowSpacing="10"
+                                Margin="0,15,0,15"
+                                RowDefinitions="Auto,*"
+                                BackgroundColor="#FD5C63">
+
+                          <Image Grid.Column="1"
+                               Margin="10,10,0,0"
+                               Source="{Binding }"
+                               WidthRequest="90"
+                               HeightRequest="90"
+                               Aspect="AspectFit"/>
+
+                            <Label Grid.Column="2" 
+                               Margin="20,0,15,0"
+                               Text="{Binding }"
+                               VerticalOptions="Center"
+                               TextColor="Black"/>
+
+                            <Button 
+                                CommandParameter="0" 
+                                Grid.Column="0"
+                                FontSize="5"
+                                BackgroundColor="Transparent">
+                                <Button.ImageSource>
+                                         <FontImageSource Size="50" FontFamily="MaterialDesignIcons" Glyph="&#xe838;" /> </Button.ImageSource>
+                                </Button>
+
+                                            
+                                       
+                                    </Grid>                                    
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+
+    </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
